@@ -23,6 +23,6 @@ export const MenuListItem = (props) => {
         onMouseEnter={activate}
         onMouseLeave={deactivate}
         style={{ backgroundColor: getBackgroundColor() }}>
-        Set to : {props.difficulty}
+        Set difficulty to: {props.difficulty}
     </div>
 }
