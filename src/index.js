@@ -1,17 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Import react tools
+import ReactDOM from "react-dom/client";
+//Import first component: app
+import { App } from "./App";
+//Target the root div
+const rootDiv = document.getElementById("root");
+//Transform the root div into a react node
+const reactRoot = ReactDOM.createRoot(rootDiv);
+//Inject our app component into the react node
+reactRoot.render(<App />);
