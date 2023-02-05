@@ -13,12 +13,21 @@ export const MenuListItem = (props) => {
     function getBackgroundColor() {
         if (isHovered) {
             return "Green"
-        } else
-            return "Red"
+        } else{
+           if(props.isSelected){
+            return "Green"
+           } 
+           return "Red"
+        }     
+    }
+
+    const onItemClick = () => {
+        props.onClick(props.difficulty)
     }
 
     console.log("Is hovered?", isHovered)
     return <div
+        onClick={onItemClick}
         className={s.container}
         onMouseEnter={activate}
         onMouseLeave={deactivate}
